@@ -38,7 +38,7 @@ for line in lines:
         num-=100
     if num==0:
         passwd+=1
-    print("num:",num)
-    print("numZeroes:",passwd)
+    #print("num:",num)
+    #print("numZeroes:",passwd)
 print(passwd)
 #6863 too high
