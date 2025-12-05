@@ -10,10 +10,14 @@ for line in lines:
     id=line.split("-")
     i=int(id[0])
     for i in range(int(id[0]),int(id[-1])+1):
-        #if i%2==0:
-        base = 10**(len(str(i))/2)
-        if int(i/base)==int(i%base):
+        halfLen = len(str(i))/2 # int division! - only for part 1
+        base = 10**(halfLen)
+        #if len(str(i))==2*halfLen: # check if length even - only for part 1
+        if int(i/base)==int(i%base) and base>9:
+            print(i)
             sum+=i
+        # else:
+        #     print("valid id:",i) # debug; too long
     # while i>int(id[0]) and i<=int(id[-1]):
     #     base = 10**(len(str(i))/2)
     #     if int(i/base)==int(i%base):
@@ -22,3 +26,4 @@ for line in lines:
 
 print("sum:",sum)
 # 26368490878 too high
+# 26368490864 too high
